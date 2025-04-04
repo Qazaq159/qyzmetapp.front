@@ -1,0 +1,109 @@
+.plan-container {
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    min-height: 80vh;
+  }
+  
+  .plan-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan-subtitle {
+    font-size: 1.3rem;
+    color: #282828;
+    max-width: 42rem;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .plan-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .plan-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    width: 350px;
+    border: 1px solid #d0d0d0;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .plan-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .selected {
+    border: 1.5px solid #000;
+  }
+  
+  .plan-card .plan-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .plan-description {
+    color: #3d3d3d;
+    font-size: 1rem;
+    margin: 5px 0 0;
+  }
+  
+  .plan-price {
+    font-size: 1.8rem;
+    margin: 20px 0 0;
+  }
+  
+  .perMonth {
+    font-size: 1rem;
+    color: #313131;
+    display: block; 
+    margin-top: 4px;
+    font-weight: 100;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .plan-feature {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .plan-feature::before {
+    content: "✔";
+    color: #000;
+    margin-right: 8px;
+  }
+  
+  .plan-button {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .plan-button:hover {
+    background-color: #000;
+  }
+  

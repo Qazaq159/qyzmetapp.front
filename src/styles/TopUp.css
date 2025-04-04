@@ -1,0 +1,96 @@
+.topuppage{
+    min-height: 85vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-up-container {
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-up-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .instruction {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .payment-details {
+    margin: 20px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+  }
+  
+  .kaspi-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0667cf;
+  }
+  
+  .top-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .top-up-form label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .top-up-form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-btn:hover {
+    background: #0369d6;
+  }
+  
+  .success-message {
+    margin-top: 10px;
+    color: rgb(146, 17, 30);
+  }
+  
+  .file-input {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  .file-input::file-selector-button {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sucs-message{
+    color: #437914;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }

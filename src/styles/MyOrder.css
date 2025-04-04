@@ -1,0 +1,195 @@
+.my-order-page{
+    padding: 1.5rem 17rem;
+    min-height: 85vh;
+}
+
+.order-container {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+.order-details-section {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+  
+.order-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+.order-status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.order-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+  
+.order-files h4 {
+    margin: 1rem 0 0;
+}
+
+.order-files ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+  
+.order-file-link {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    padding: 6px 8px;
+}
+  
+.order-file-link:hover {
+    background-color: #f5f5f5;
+}
+  
+.order-status-section {
+    flex: 1;
+    background: #fff;
+    padding: 20px 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+.order-status-section h2{
+    margin: 0 0 10px;
+}
+
+.status-change{
+    margin-bottom: 15px;
+}
+
+.order-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .order-info-item {
+    border-radius: 5px;
+  }
+  
+  .order-info-label {
+    font-weight: bold;
+  }
+  
+  .order-status-panel {
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .order-description-title{
+    margin: 0;
+  }
+  
+.status-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.order-action-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: start;
+}
+  
+.order-action-button:hover {
+    background: #383838;
+}
+
+.divider {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
+  
+.delete-order {
+    background: #f44336;
+    width: 100%;
+}
+  
+.delete-order:hover {
+    background: #d32f2f;
+}
+  
+.order-executor-section {
+    margin-top: 10px;
+}
+.assigned {
+    margin: 10px;
+}
+  
+.order-executor-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.order-chat-section {
+    margin-top: 20px;
+}
+
+.no-mess{
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+  
+.order-last-message {
+    font-size: 16px;
+    font-style: italic;
+}
+  
+.order-chat-open-button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+  
+.order-chat-open-button:hover {
+    background: #0056b3;
+}  

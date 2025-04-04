@@ -1,0 +1,257 @@
+.subscription-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    padding: 20px;
+  }
+  
+  .subscription-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .subscription-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background: rgb(255 237 213);
+    color: rgb(234 88 12);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .subscription-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .subscription-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111827;
+  }
+  
+  .subscription-message {
+    font-size: 16px;
+    color: #5e636d;
+    margin: 0;
+  }
+  
+.subscription-info {
+  background: #f9fafb;
+  padding: 16px; 
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  text-align: left;
+}
+
+.subscription-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.subscription-info-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+
+.subscription-info-text {
+  flex: 1; 
+}
+
+.subscription-info-title {
+  font-weight: bold;
+  color: #000 !important;
+  margin-bottom: 4px;
+}
+
+.subscription-info p {
+  font-size: 14px;
+  color: #5e636d;
+  margin: 0;
+}
+
+.subscription-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  margin-top: 16px;
+}
+
+.subscription-button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.subscription-button.primary {
+  background: black;
+  color: white;
+}
+
+.subscription-button.primary:hover {
+  background: #333;
+}
+
+.subscription-button.secondary {
+  background: #f3f4f6;
+  color: black;
+}
+
+.subscription-button.secondary:hover {
+  background: #e5e7eb;
+}
+
+.arrow-icon-order {
+    width: 18px;
+    height: 18px;
+}
+
+.no-orders-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    padding: 20px;
+  }
+
+.no-orders-card{
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .icon-wrap{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .no-orders-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #d7dbe0;;
+    border-radius: 50%;
+  }
+  
+  .icon-style {
+    width: 40px;
+    height: 40px;
+    color: #000;
+  }
+  
+  .no-orders-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+  }
+  
+  .no-orders-message {
+    font-size: 16px;
+    color: #101010;
+    max-width: 320px;
+    margin: 0 0 10px;
+  }
+  
+  .no-orders-button {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .no-orders-button:hover {
+    background: #333;
+  }
+  
+  .error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 91vh;
+    background-color: #fcfcfc;
+  }
+  
+  .error-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+  }
+  
+  .error-icon {
+    font-size: 50px;
+    color: #d34742;
+  }
+  
+  .error-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .error-button {
+    background-color: #d9534f;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .error-button:hover {
+    background-color: #c9302c;
+  }
+  

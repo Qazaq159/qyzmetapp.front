@@ -1,0 +1,131 @@
+.authpage{
+    display: flex;
+    align-items: center;
+    min-height: 91vh;
+    justify-content: center;
+}
+
+.auth-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+  
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+  
+.tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+  
+.auth-content {
+    padding: 20px;
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+  
+.input-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+  
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+  
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+  
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+}
+  
+.social-btn {
+    background-color: #eee;
+}
+  
+.google {
+    background-color: #4e4d4d;
+    color: white;
+}
+  
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+  
+.message {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}  

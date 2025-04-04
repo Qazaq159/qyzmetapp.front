@@ -1,0 +1,153 @@
+.order-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  border: 1px solid #E5E7EB;
+  text-align: start;
+}
+
+.order-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.order-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.order-meta {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: #F3F4F6;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #1F2937;
+}
+
+.badge svg {
+  margin-right: 5px;
+}
+
+.badge-budget {
+  background: #f3f3f3;
+  color: #000;
+}
+
+.badge-deadline {
+  background: #f3f3f3;
+  color: #000;
+}
+
+.category-badge {
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attached-files strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.file-link {
+  display: block;
+  text-decoration: none;
+  background: #F9FAFB;
+  border: 1px solid #D1D5DB;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 5px;
+  width: auto;
+}
+
+.file-link:hover {
+  background: #eaebec;
+  color: #111827;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.accept-btn {
+  background: black;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.reject-btn {
+  background: #F9FAFB;
+  border: 1px solid #D1D5DB;
+  color: black;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.accept-btn:hover {
+  background: #1E1E1E;
+}
+
+.reject-btn:hover {
+  background: #eaebec;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  min-height: 85vh;
+  text-align: center;
+  padding: 45px;
+  gap:20px;
+}
+
+h1 {
+  margin: 0;
+}  
+
+.btn-spinner {
+  animation: btnspin 1s linear infinite;
+  width: 16px; 
+  height: 16px;
+}
+
+@keyframes btnspin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
