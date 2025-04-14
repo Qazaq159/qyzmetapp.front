@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { fetchUserProfile } from "../services/userService";
 
 const AuthForm = ({ isLogin, setIsLogin }) => {
-  const initialFormData = {name: "", phone: "", email: "", password: "", password_confirmation: "", role: "customer",};
+  const initialFormData = {name: "", phone: "", email: "", password: "", password_confirmation: "", role: "CUSTOMER",};
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -65,9 +65,9 @@ const AuthForm = ({ isLogin, setIsLogin }) => {
         {renderInputFields()}
         {!isLogin && (
           <div className="checkbox-group">
-            <input type="checkbox" id="role" name="role" checked={formData.role === "executor"}
+            <input type="checkbox" id="role" name="role" checked={formData.role === "DEVELOPER"}
               onChange={(e) =>
-                setFormData({ ...formData, role: e.target.checked ? "executor" : "customer" })} />
+                setFormData({ ...formData, role: e.target.checked ? "DEVELOPER" : "CUSTOMER" })} />
             <label htmlFor="role">I am a Developer</label>
           </div>
         )}

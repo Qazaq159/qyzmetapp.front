@@ -1,7 +1,7 @@
 import api from "./api"; 
 
 export const authService = async (formData, isLogin) => {
-  const endpoint = isLogin ? "login" : "register"; 
+  const endpoint = isLogin ? "login/" : "register/";
   try {
     const data = await api.post(endpoint, { json: formData }).json(); 
     if (!isLogin) {
