@@ -11,8 +11,16 @@ export default function MyOrders() {
   const [notification, setNotification] = useState(null);
   const [orders, setOrders] = useState(() => {
     const cachedOrders = sessionStorage.getItem("myOrders");
-    return cachedOrders ? JSON.parse(cachedOrders) : [];
-  });
+    if (cachedOrders !== undefined) {
+      try {
+        return JSON.parse(cachedOrders);
+      } catch (error) {
+        console.error("Error parsing JSON from sessionStorage:", error);
+        return [];
+      }
+    }
+    return []; 
+  });  
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();

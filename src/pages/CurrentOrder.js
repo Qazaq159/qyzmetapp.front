@@ -12,7 +12,7 @@ import MessageClientModal from "../components/MessageClientModal";
 export default function CurrentOrder() {
   const [order, setOrder] = useState(() => {
     const cachedOrder = sessionStorage.getItem("currentOrder");
-    if (!cachedOrder) return null;
+    if (cachedOrder === undefined || cachedOrder === null) return null;
     const parsedOrder = JSON.parse(cachedOrder);
     const expiresAt = new Date(parsedOrder.expires_at).getTime();
     const now = Date.now();
@@ -48,7 +48,7 @@ export default function CurrentOrder() {
     async function loadOrder() {
       try {
         const response = await fetchCurrentOrder();
-        const orderData = response.data;
+        const orderData = response;
         setOrder(orderData);
         sessionStorage.setItem("currentOrder", JSON.stringify(orderData));
       } catch (error) {

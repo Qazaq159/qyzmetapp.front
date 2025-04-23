@@ -27,7 +27,7 @@ const OrderForm = ({ onSubmit }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const budget = parseFloat(formData.budget);
-        if (isNaN(budget) || budget <= 10000) {
+        if (isNaN(budget) || budget < 10000) {
             setErrors({ budget: ["Minimum budget amount should be 10000 KZT"] });
             return;
         }

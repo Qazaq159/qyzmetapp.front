@@ -29,7 +29,7 @@ export default function Header() {
       <div className="desktop-nav">
         {token && userRole && (
           <nav className="desktop-nav">
-            {userRole === "customer" ? (
+            {userRole === "CUSTOMER" ? (
               <>
                 <Link to="/my-orders">
                   <Home size={24} /> My Orders

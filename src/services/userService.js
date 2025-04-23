@@ -3,7 +3,7 @@ import api from "./api";
 export async function fetchUserProfile() {
   try {
     const result = await api.get("user/profile").json();
-    return result.data;
+    return result;
   } catch (error) {
     throw new Error(error.message || "Ошибка при получении профиля");
   }

@@ -29,7 +29,7 @@ const MyOrder = () => {
     setStatusUpdating(newStatus);
     try {
       const updatedOrder = await updateOrderStatus(orderId, newStatus);
-      setOrder(updatedOrder.data);
+      setOrder(updatedOrder);
       sessionStorage.removeItem("myOrders");
     } catch (error) {
       console.error("Error updating order status:", error);
@@ -43,7 +43,7 @@ const MyOrder = () => {
       setStatusUpdating("delete");
       await deleteOrder(orderId);
       sessionStorage.removeItem("myOrders");
-      navigate("/orders");
+      navigate("/my-orders");
     } catch (error) {
       alert("Error deleting the order. Please try again.");
     } finally {

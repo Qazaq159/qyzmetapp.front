@@ -7,7 +7,7 @@ export const authService = async (formData, isLogin) => {
     if (!isLogin) {
       alert("Вы успешно зарегистрированы! Войдите в аккаунт.");
     } else {
-      localStorage.setItem("token", data.access_token);
+      localStorage.setItem("token", data.access);
     }
     return { success: true, data };
   } catch (error) {

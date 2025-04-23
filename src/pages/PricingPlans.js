@@ -7,7 +7,6 @@ import LoadingPage from "../components/LoadingPage";
 import ErrorPage from "../components/ErrorPage";
 import Notification from "../components/Notification";
 import Modal from "../components/Modal";
-import { useNavigate } from "react-router-dom";
 
 const PricingPlans = () => {
   const [plans, setPlans] = useState([]);
@@ -16,12 +15,11 @@ const PricingPlans = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [notification, setNotification] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
-  const navigate = useNavigate();
   useEffect(() => {
     const loadPlans = async () => {
       try {
         const cachedData = sessionStorage.getItem("pricingPlans");
-        if (cachedData) {
+        if (cachedData && cachedData !== "undefined") {
           setPlans(JSON.parse(cachedData));
           setLoading(false);
           return;

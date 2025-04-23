@@ -3,7 +3,7 @@ import api from "./api";
 export const fetchMyOrders = async () => {
   try {
     const response = await api.get("my-orders").json();
-    return response.data;
+    return response;
   } catch (error) {
     console.error("Orders fetching error:", error);
     throw error;
@@ -22,7 +22,7 @@ export const fetchCurrentOrder = async () => {
 
 export const createOrder = async (orderData) => {
   try {
-    const response = await api.post("orders", {
+    const response = await api.post("orders/", {
       body: orderData,
       headers: {
         Accept: "application/json", 
@@ -41,7 +41,7 @@ export const createOrder = async (orderData) => {
 
 export const rejectOrder = async (orderId) => {
   try {
-    const response = await api.post(`orders/${orderId}/reject`).json();
+    const response = await api.post(`orders/${orderId}/reject/`).json();
     return response;
   } catch (error) {
     console.error("Order rejection error:", error);
@@ -51,7 +51,7 @@ export const rejectOrder = async (orderId) => {
 
 export const deleteOrder = async (orderId) => {
   try {
-      await api.delete(`orders/${orderId}`);
+      await api.delete(`orders/${orderId}/`);
   } catch (error) {
       console.error("Error deleting order:", error);
       throw error;
@@ -60,8 +60,8 @@ export const deleteOrder = async (orderId) => {
 
 export const fetchOrderDetails = async (orderId) => {
   try {
-    const response = await api.get(`orders/${orderId}`).json();
-    return response.data;
+    const response = await api.get(`my-orders/${orderId}/`).json();
+    return response;
   } catch (error) {
     console.error("Error fetching order details:", error);
     throw error;
@@ -70,7 +70,7 @@ export const fetchOrderDetails = async (orderId) => {
 
 export const updateOrderStatus = async (orderId, status) => {
   try {
-    const response = await api.patch(`orders/${orderId}/status`, {json: { status }}).json();
+    const response = await api.patch(`orders/${orderId}/status/`, {json: { status }}).json();
     return response;
   } catch (error) {
     console.error("Error updating order status:", error);

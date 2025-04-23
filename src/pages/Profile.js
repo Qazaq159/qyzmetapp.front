@@ -81,7 +81,7 @@ function Profile() {
             Top Up Balance
           </button>
         </div>
-        {user.role === "executor" && (
+        {user.role === "DEVELOPER" && (
   <div className="profile-card">
     <h2 className="profile-card-title">Subscription Status</h2>
     {user.subscription ? (
