@@ -11,6 +11,7 @@ import PricingPlans from './pages/PricingPlans';
 import ChatPage from './pages/ChatPage';
 import ChatListPage from "./pages/ChatListPage";
 import MyOrder from './pages/MyOrder';
+import PaymentHistory from "./pages/PaymentHistory";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/pricing" element={<PricingPlans />} />
         <Route path="/chats" element={<ChatListPage />} />
         <Route path="/chats/:chatId" element={<ChatPage />} />
+        <Route path="/payment-history" element={<PaymentHistory />} />
       </Routes>
     </Router>
   );

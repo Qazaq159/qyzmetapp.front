@@ -1,0 +1,106 @@
+/* TopUp.css */
+
+.topuppage {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-up-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.top-up-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1f2937;
+}
+
+.top-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-up-form label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.top-up-form input {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.top-up-form input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.card-element {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+}
+
+.submit-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.submit-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.sucs-message {
+    color: #10b981;
+    font-weight: 500;
+    text-align: center;
+}
+
+.error-message {
+    color: #ef4444;
+    font-weight: 500;
+    text-align: center;
+}
+
+.history-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #3b82f6;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.history-link:hover {
+    color: #1d4ed8;
+}
