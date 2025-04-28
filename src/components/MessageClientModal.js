@@ -12,7 +12,7 @@ const MessageClientModal = ({ orderId, onClose }) => {
     setIsSending(true);
     try {
         const response = await sendResponse(orderId, message);
-        const chatData = response.data;
+        const chatData = response;
         navigate(`/chats/${chatData.id}`, { state: { chatData } });
     } catch (error) {
         console.error("Error sending message:", error);

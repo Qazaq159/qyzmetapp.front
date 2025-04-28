@@ -14,7 +14,7 @@ export const sendResponse = async (orderId, message) => {
 export const fetchChatMessages = async (chatId) => {
     try {
       const response = await api.get(`chats/${chatId}`).json();
-      return response.data;
+      return response;
     } catch (error) {
       console.error("Error fetching chat messages:", error);
       throw error;
@@ -24,7 +24,7 @@ export const fetchChatMessages = async (chatId) => {
 export const sendMessage = async (chatId, message) => {
     try {
       const response = await api
-        .post(`chats/${chatId}/send-message`, {json: { message }}).json();
+        .post(`chats/${chatId}/send-message/`, {json: { message }}).json();
       return response;
     } catch (error) {
       console.error("Message sending error:", error);
@@ -34,7 +34,7 @@ export const sendMessage = async (chatId, message) => {
 
 export const markChatAsRead = async (chatId)  => {
     try {
-        await api.post(`chats/${chatId}/read`);
+        await api.post(`chats/${chatId}/read/`);
     } catch (error) {
       console.error("Error fetching user chats:", error);
       throw error;
@@ -44,7 +44,7 @@ export const markChatAsRead = async (chatId)  => {
 export const fetchUserChats = async () => {
     try {
       const response = await api.get("chats").json();
-      return response.data;
+      return response;
     } catch (error) {
       console.error("Error fetching user chats:", error);
       throw error;

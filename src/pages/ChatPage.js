@@ -40,8 +40,8 @@ const ChatPage = () => {
     setIsSending(true);
     try {
       const response = await sendMessage(chatId, newMessage);
-      setChatData(response.data);
-      setMessages(response.data.messages);
+      setChatData(response);
+      setMessages(response.messages);
       setNewMessage("");
     } catch (error) {
       console.error("Error sending message:", error);
