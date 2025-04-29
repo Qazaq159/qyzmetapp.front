@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { fetchChatMessages, sendMessage, markChatAsRead } from "../services/chatService";
 import "../styles/ChatPage.css";
@@ -14,6 +14,8 @@ const ChatPage = () => {
   const [newMessage, setNewMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [isLoading, setIsLoading] = useState(!chatData);
+  const [socket, setSocket] = useState(null);
+  const messagesEndRef = useRef(null);
 
   useEffect(() => {
     if (!chatData) {
@@ -34,7 +36,34 @@ const ChatPage = () => {
       } else {
         markChatAsRead(chatId);
       }
+      const socketConnection = new WebSocket(`ws://localhost:8000/ws/chat/${chatId}/`);
+      socketConnection.onopen = () => {
+        console.log("WebSocket connection established.");
+      };
+      socketConnection.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          {
+            message: data.message,
+            user_id: data.user_id,
+            created_at: data.created_at,
+          },
+        ]);
+      };
+      socketConnection.onclose = () => {
+        console.log("WebSocket connection closed.");
+      };
+      setSocket(socketConnection);
+      return () => {
+        socketConnection.close();
+      };  
     }, [chatId, chatData]);
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);  
   const handleSendMessage = async () => {
     if (!newMessage.trim()) return;
     setIsSending(true);
@@ -64,6 +93,7 @@ const ChatPage = () => {
             <small className="message-time">{msg.created_at}</small>
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="chat-input">
         <input
