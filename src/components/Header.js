@@ -11,8 +11,7 @@ export default function Header() {
   useEffect(() => {
     const storedRole = sessionStorage.getItem("userRole");
     if (storedRole) {
-      const userRole = JSON.parse(storedRole);
-      setUserRole(userRole);
+      setUserRole(storedRole);
     }
   }, []);
   const handleLoginClick = () => {
