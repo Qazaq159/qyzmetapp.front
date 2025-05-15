@@ -18,12 +18,6 @@ const PricingPlans = () => {
   useEffect(() => {
     const loadPlans = async () => {
       try {
-        const cachedData = sessionStorage.getItem("pricingPlans");
-        if (cachedData && cachedData !== "undefined") {
-          setPlans(JSON.parse(cachedData));
-          setLoading(false);
-          return;
-        }
         const data = await getSubscriptionTypes();
         setPlans(data);
         sessionStorage.setItem("pricingPlans", JSON.stringify(data));
