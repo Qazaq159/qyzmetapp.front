@@ -45,8 +45,7 @@ function TopUpForm() {
             });
             if (stripeErr) throw stripeErr;
 
-            setMsg("Оплата прошла успешно! Баланс скоро обновится.");
-            setTimeout(() => nav("/my-profile"), 3500);
+            setTimeout(() => nav("/my-profile"), 1000);
         } catch (e) {
             // console.error("DEBUG ⟶", e);
             setErr(e.message ?? "Ошибка");
