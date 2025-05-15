@@ -18,7 +18,7 @@ function Profile() {
       try {
         const userData = await fetchUserProfile();
         setUser(userData);
-        sessionStorage.setItem("user", JSON.stringify(userData));
+        // sessionStorage.setItem("user", JSON.stringify(userData));
       } catch (error) {
         console.error(error.message);
         navigate("/auth");

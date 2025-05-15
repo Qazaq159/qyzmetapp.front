@@ -9,10 +9,10 @@ export default function Header() {
   const token = localStorage.getItem("token");
   const [userRole, setUserRole] = useState(null);
   useEffect(() => {
-    const storedUser = sessionStorage.getItem("user");
-    if (storedUser) {
-      const userData = JSON.parse(storedUser);
-      setUserRole(userData.role);
+    const storedRole = sessionStorage.getItem("userRole");
+    if (storedRole) {
+      const userRole = JSON.parse(storedRole);
+      setUserRole(userRole);
     }
   }, []);
   const handleLoginClick = () => {

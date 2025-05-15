@@ -27,7 +27,8 @@ const AuthForm = ({ isLogin, setIsLogin }) => {
       if (isLogin) {
         try {
           const userData = await fetchUserProfile();
-          sessionStorage.setItem("user", JSON.stringify(userData));
+          const userRole = userData.role;
+          sessionStorage.setItem("userRole", userRole);
           navigate("/");
         } catch (error) {
           console.error("Ошибка загрузки профиля:", error.message);
